@@ -17,9 +17,9 @@ fullscreen = 0
 # =========================
 # ANDROID CONFIG (FIXED)
 # =========================
-android.api = 33
+android.api = 34
 android.minapi = 21
-android.build_tools = 34.0.0
+android.build_tools_version = 34.0.0
 
 android.archs = arm64-v8a, armeabi-v7a
 
@@ -31,10 +31,3 @@ android.permissions = INTERNET
 # android.enable_androidx = True
 # android.wakelock = False
 # android.private_storage = True
-
-# =========================
-# IGNORE ADVANCED SETTINGS (leave default)
-# =========================
-# android.sdk_path =
-# android.ndk_path =
-# android.ant_path =
