@@ -1,0 +1,153 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": ["hola", "buenas", "qué más", "hola sumercé"],
+      "responses": [
+        "¡Hola sumercé! Qué gusto saludarle. ¿Cómo está? Cuénteme, ¿usted ya ha escuchado algo sobre la energía solar o está empezando desde cero?",
+        "Buenas mijo, bienvenido. Aquí le ayudo con todo lo de energía solar. Dígame, ¿para qué le gustaría usarla en su casa o finca?",
+        "Hola pues, sumercé. Estoy listo para ayudarle. ¿Tiene luz eléctrica o está en una zona donde no llega todavía?"
+      ]
+    },
+
+    { "tag": "despedida", 
+    "patterns": ["chao", "nos vemos", "gracias", "hasta luego"], 
+    "responses": [ "Bueno sumercé, que le rinda. Cualquier cosa aquí estoy para ayudarle con lo de energía solar.", 
+    "Chao mijo, que esté muy bien. Ojalá le sirva todo lo que hablamos.", 
+    "Hasta luego sumercé, y ánimo con ese proyecto de energía solar." ] 
+    },
+
+    
+    {
+      "tag": "que_es_energia_solar",
+      "patterns": ["qué es la energía solar", "energía solar qué significa"],
+      "responses": [
+        "Mire sumercé, la energía solar es la que viene del sol y se convierte en electricidad con paneles. Es muy útil donde no hay luz. ¿Usted cree que le serviría en su casa o finca?",
+        "Pues vea mijo, el sol nos regala energía todos los días, y con paneles la podemos usar. ¿Le gustaría tener independencia eléctrica o reducir gastos?",
+        "Es una forma limpia de tener energía, sumercé. ¿En su zona hay problemas con la electricidad o no llega del todo?"
+      ]
+    },
+
+    {
+      "tag": "componentes_sistema",
+      "patterns": ["qué tiene un sistema solar", "partes sistema solar"],
+      "responses": [
+        "Un sistema tiene paneles, baterías, un controlador y un inversor, sumercé. Cada uno cumple una función importante. ¿Le gustaría que le explique uno por uno más despacio?",
+        "Mijo, es como un equipo: unos capturan energía, otros la guardan y otros la reparten. ¿Cuál parte le da más curiosidad?",
+        "Pues vea, sumercé, todo trabaja en conjunto. ¿Está pensando en instalar uno o solo quiere aprender por ahora?"
+      ]
+    },
+
+    {
+      "tag": "baterias",
+      "patterns": ["para qué sirven baterías"],
+      "responses": [
+        "Las baterías guardan la energía para la noche, sumercé. Sin ellas no tendría luz cuando no hay sol. ¿Usted necesita energía en la noche también?",
+        "Mijo, son como un tanque de energía. ¿En su casa usan luz principalmente de noche?",
+        "Pues vea, sumercé, gracias a las baterías puede tener luz constante. ¿Le interesa algo básico o un sistema más completo?"
+      ]
+    },
+
+    {
+      "tag": "instalacion",
+      "patterns": ["cómo instalar paneles"],
+      "responses": [
+        "La instalación requiere buena ubicación y conexiones seguras, sumercé. Lo mejor es hacerlo con alguien que sepa. ¿Usted piensa hacerlo usted mismo o buscar ayuda?",
+        "Mijo, no es tan complicado, pero hay que hacerlo bien. ¿Tiene techo disponible donde le pegue buen sol?",
+        "Pues vea, sumercé, lo importante es que reciba bastante sol. ¿En su casa hay buena exposición al sol?"
+      ]
+    },
+
+    {
+      "tag": "beneficios",
+      "patterns": ["ventajas energía solar"],
+      "responses": [
+        "La energía solar no contamina y le ahorra dinero, sumercé. Además, es ideal para el campo. ¿Usted busca ahorrar o más bien tener independencia?",
+        "Mijo, le da tranquilidad porque no depende de la red. ¿Ha tenido problemas con cortes de luz?",
+        "Pues vea, sumercé, mejora la calidad de vida. ¿Qué es lo que más le gustaría mejorar en su hogar?"
+      ]
+    },
+
+    {
+      "tag": "zonas_rurales",
+      "patterns": ["sirve en el campo"],
+      "responses": [
+        "Es perfecta para el campo, sumercé. Lleva energía donde no hay red. ¿En su vereda hay electricidad o no llega?",
+        "Mijo, muchos campesinos ya la usan. ¿Usted qué necesidades tiene, luz, cargar celular o algo más?",
+        "Pues vea, sumercé, cambia completamente la vida. ¿Le gustaría instalar algo así en su finca?"
+      ]
+    },
+
+    {
+      "tag": "costos",
+      "patterns": ["cuánto cuesta"],
+      "responses": [
+        "Puede parecer costoso al inicio, sumercé, pero se paga solo con el tiempo. ¿Usted tiene pensado invertir pronto o solo está averiguando?",
+        "Mijo, hay opciones económicas según lo que necesite. ¿Quiere algo básico o más completo?",
+        "Pues vea, sumercé, depende del tamaño del sistema. ¿Qué le gustaría alimentar, luces, nevera o más cosas?"
+      ]
+    },
+
+    {
+      "tag": "mantenimiento",
+      "patterns": ["mantenimiento paneles"],
+      "responses": [
+        "Solo hay que limpiarlos y revisarlos de vez en cuando, sumercé. ¿Usted cree que podría hacer ese mantenimiento?",
+        "Mijo, es sencillo, no necesita mucho trabajo. ¿En su zona hay mucho polvo o suciedad?",
+        "Pues vea, sumercé, con buen cuidado duran muchos años. ¿Le interesa algo duradero?"
+      ]
+    },
+
+    {
+      "tag": "consumo",
+      "patterns": ["qué puedo usar"],
+      "responses": [
+        "Puede usar luces, celular, TV, sumercé. Todo depende del sistema. ¿Qué le gustaría alimentar primero?",
+        "Mijo, se puede adaptar a sus necesidades. ¿Qué aparatos usa más en su día a día?",
+        "Pues vea, sumercé, todo es cuestión de cálculo. ¿Quiere algo básico o completo?"
+      ]
+    },
+
+    {
+      "tag": "curiosidad",
+      "patterns": ["dato curioso"],
+      "responses": [
+        "Sumercé, el sol en una hora da más energía que todo el mundo usa en un año. ¿Se imagina aprovechar eso en su casa?",
+        "Mijo, los paneles se usaron primero en el espacio. ¿Le gustan esos datos curiosos?",
+        "Pues vea, sumercé, hay casas que viven solo del sol. ¿Le gustaría algo así?"
+      ]
+    },
+
+    {
+      "tag": "curiosidad_avanzada",
+      "patterns": ["más curiosidades"],
+      "responses": [
+        "Sumercé, hay carros y hasta aviones solares. ¿Se imagina eso en unos años en su región?",
+        "Mijo, algunos países funcionan casi con pura energía solar. ¿Cree que Colombia podría lograr eso?",
+        "Pues vea, sumercé, la tecnología sigue avanzando. ¿Le gustaría aprender más de eso?"
+      ]
+    },
+
+    {
+      "tag": "fallas",
+      "patterns": ["no funciona"],
+      "responses": [
+        "Puede ser suciedad o batería, sumercé. ¿Hace cuánto revisa su sistema?",
+        "Mijo, a veces son conexiones. ¿Ha notado algo raro recientemente?",
+        "Pues vea, sumercé, siempre es bueno revisar. ¿Quiere que le ayude a diagnosticarlo?"
+      ]
+    },
+
+    {
+      "tag": "motivacion",
+      "patterns": ["vale la pena"],
+      "responses": [
+        "Claro que sí, sumercé. Le mejora la vida bastante. ¿Qué es lo que más le motiva a considerar esto?",
+        "Mijo, es una gran decisión a futuro. ¿Está pensando hacerlo pronto?",
+        "Pues vea, sumercé, le da independencia. ¿Qué le gustaría lograr con eso?"
+      ]
+    }
+  ]
+}
+
+
