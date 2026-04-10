@@ -36,14 +36,14 @@ jobs:
         pip install buildozer cython
 
     # =========================
-    # FORCE CLEAN BUILDOZER CACHE (IMPORTANT FIX)
+    # CLEAN CACHE
     # =========================
     - name: Remove broken Buildozer SDK
       run: |
         rm -rf ~/.buildozer
 
     # =========================
-    # ANDROID SDK INSTALL (EXTERNAL)
+    # ANDROID SDK
     # =========================
     - name: Install Android SDK
       run: |
@@ -56,29 +56,23 @@ jobs:
 
         echo "ANDROID_SDK_ROOT=$HOME/android-sdk" >> $GITHUB_ENV
         echo "ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
-        echo "ANDROIDSDK=$HOME/android-sdk" >> $GITHUB_ENV
         echo "$HOME/android-sdk/cmdline-tools/latest/bin" >> $GITHUB_PATH
-        echo "$HOME/android-sdk/platform-tools" >> $GITHUB_PATH
 
     # =========================
-    # ACCEPT LICENSES
-    # =========================
-    - name: Accept licenses
-      run: |
-        yes | sdkmanager --sdk_root=$HOME/android-sdk --licenses || true
-
-    # =========================
-    # INSTALL SDK (FIX AIDL)
+    # INSTALL SDK COMPONENTS (FIX AIDL)
     # =========================
     - name: Install SDK packages
       run: |
-        yes | sdkmanager --sdk_root=$HOME/android-sdk \
-        "platform-tools" \
-        "platforms;android-33" \
-        "build-tools;33.0.2"
+        yes | sdkmanager --sdk_root=$HOME/android-sdk --licenses
+
+        sdkmanager --sdk_root=$HOME/android-sdk \
+          "platform-tools" \
+          "platforms;android-34" \
+          "build-tools;34.0.0" \
+          "cmdline-tools;latest"
 
     # =========================
-    # FORCE BUILDOZER TO USE EXTERNAL SDK
+    # BUILD APK
     # =========================
     - name: Build APK
       run: |
