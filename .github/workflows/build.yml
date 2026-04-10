@@ -17,13 +17,19 @@ jobs:
       with:
         python-version: "3.10"
 
+    # =========================
+    # SYSTEM DEPENDENCIES
+    # =========================
     - name: Install system dependencies
       run: |
         sudo apt update
-        sudo apt install -y git zip unzip openjdk-17-jdk python3-pip \
+        sudo apt install -y git zip unzip wget openjdk-17-jdk python3-pip \
         autoconf libtool pkg-config zlib1g-dev libncurses5-dev \
-        libncursesw5-dev libtinfo6 cmake libffi-dev libssl-dev wget
+        libncursesw5-dev libtinfo6 cmake libffi-dev libssl-dev
 
+    # =========================
+    # PYTHON DEPENDENCIES
+    # =========================
     - name: Install Python dependencies
       run: |
         pip install --upgrade pip
@@ -42,18 +48,33 @@ jobs:
         mv cmdline-tools latest
 
         echo "ANDROID_SDK_ROOT=$HOME/android-sdk" >> $GITHUB_ENV
+        echo "ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
         echo "$HOME/android-sdk/cmdline-tools/latest/bin" >> $GITHUB_PATH
         echo "$HOME/android-sdk/platform-tools" >> $GITHUB_PATH
 
+    # =========================
+    # ACCEPT LICENSES
+    # =========================
     - name: Accept Android licenses
-      run: yes | sdkmanager --sdk_root=$HOME/android-sdk --licenses || true
+      run: |
+        yes | sdkmanager --sdk_root=$HOME/android-sdk --licenses || true
 
+    # =========================
+    # INSTALL STABLE SDK PACKAGES
+    # =========================
     - name: Install Android SDK packages
       run: |
         yes | sdkmanager --sdk_root=$HOME/android-sdk \
         "platform-tools" \
         "platforms;android-33" \
-        "build-tools;34.0.0"
+        "build-tools;33.0.2"
+
+    # =========================
+    # CLEAN BUILD (IMPORTANT)
+    # =========================
+    - name: Clean Buildozer
+      run: |
+        buildozer android clean || true
 
     # =========================
     # BUILD APK
