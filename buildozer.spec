@@ -26,12 +26,15 @@ android.archs = arm64-v8a, armeabi-v7a
 android.permissions = INTERNET
 
 # =========================
-# OPTIONAL (keep simple for now)
+# OPTIONAL (SAFE DEFAULTS)
 # =========================
 # android.enable_androidx = True
 # android.wakelock = False
+# android.private_storage = True
 
 # =========================
-# PYTHON FOR ANDROID
+# IGNORE ADVANCED SETTINGS (leave default)
 # =========================
-# (leave defaults)
+# android.sdk_path =
+# android.ndk_path =
+# android.ant_path =
